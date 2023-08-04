@@ -10,7 +10,7 @@ function Header() {
     function logout()
     {
         localStorage.clear();
-        navigate("/register");
+        navigate("/login");
     }
 
     return (
