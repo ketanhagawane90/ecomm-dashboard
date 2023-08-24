@@ -5,7 +5,7 @@ function Header() {
     const navigate=useNavigate();
     
     const user = JSON.parse(localStorage.getItem('user-info'));
-    console.warn(user);
+    //console.warn(user);
 
     function logout()
     {
