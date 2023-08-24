@@ -2,6 +2,7 @@ import Header from "./Header";
 import React,{useState,useEffect} from "react";
 import axios from 'axios';
 import { Table } from "react-bootstrap";
+import {Link} from 'react-router-dom';
 
 function ProductList()
 {
@@ -21,7 +22,7 @@ function ProductList()
       result = await result.json();
       console.warn(result);
       getData()
-    }
+    } 
 
     async function getData()
     {
@@ -59,6 +60,7 @@ function ProductList()
                     <td>{product.description}</td>
                     <td>{product.price}</td>
                     <td><span className="deleteBtn" onClick={()=>{deleteOperation(product.id)}}>Delete</span></td>
+                    <td><Link to={"/update/"+product.id}><span className="updateBtn">Update</span></Link></td>
                     </tr>
             ))}
             </tbody>

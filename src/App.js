@@ -19,7 +19,7 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path='/add' element={<Protected Cmp={AddProduct} />}></Route>  
-          <Route path='/update' element={<Protected Cmp={UpdateProduct} />}></Route>
+          <Route path='/update/:id' element={<Protected Cmp={UpdateProduct} />}></Route>
           <Route path='/' element={<Protected Cmp={ProductList} />}></Route>
 
           {/* <Route path="/add" Component={AddProduct} /> */}
